@@ -2,112 +2,100 @@
 
 <img src="build/icon.png" width="96" alt="">
 
-# مرسم · Marsam
+# Marsam · مرسم
 
-**محرر Mermaid احترافي بواجهة عربية، يعمل بالكامل دون اتصال بالإنترنت.**
+**A professional Mermaid diagram editor that works completely offline, with an English and Arabic interface.**
 
-Windows · macOS · Linux · أي متصفح
+Windows · macOS · Linux · any browser
 
 </div>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/screenshot-dark.png">
-  <img src="docs/screenshot-light.png" alt="واجهة مرسم: قائمة المخططات، محرر الشيفرة، ومعاينة حيّة لمخطط انسيابي عربي">
+  <img src="docs/screenshot-light.png" alt="Marsam: the diagram list, the code editor and a live preview of a flowchart">
 </picture>
 
-## التحميل
+## Download
 
-حمّل أحدث نسخة من صفحة [**Releases**](../../releases/latest):
+Get the latest version from the [**Releases**](../../releases/latest) page:
 
-| النظام | الملف | ملاحظة |
+| Platform | File | Notes |
 |---|---|---|
-| Windows | `Marsam-Setup-<الإصدار>.exe` | مثبّت عادي: اختصار على سطح المكتب وقائمة ابدأ، ويفتح ملفات `.mmd` بنقرة مزدوجة |
-| Windows | `Marsam-<الإصدار>-portable.exe` | ملف واحد يعمل دون تثبيت، مناسب للفلاشة |
-| macOS | `Marsam-<الإصدار>-arm64.dmg` / `-x64.dmg` | ‏arm64 لأجهزة Apple Silicon، و‏x64 لأجهزة Intel |
-| Linux | `Marsam-<الإصدار>-x86_64.AppImage` / `.deb` | |
-| أي متصفح | `Marsam-<الإصدار>-web-offline.zip` | فك الضغط وافتح `index.html` |
+| Windows | `Marsam-Setup-<version>.exe` | Installer: desktop and Start-menu shortcuts, opens `.mmd` files on double-click, updates itself |
+| Windows | `Marsam-<version>-portable.exe` | A single file that runs without installing — handy on a USB stick |
+| macOS | `Marsam-<version>-arm64.dmg` / `-x64.dmg` | arm64 for Apple Silicon, x64 for Intel (when included in the release) |
+| Linux | `Marsam-<version>-x86_64.AppImage` / `.deb` | When included in the release |
+| Any browser | `Marsam-<version>-web-offline.zip` | Unzip and open `index.html` |
 
 > [!NOTE]
-> **Windows:** البرنامج غير موقَّع رقميًا، لذلك قد تظهر رسالة «Windows protected your PC». اضغط **More info** ثم **Run anyway**.
+> **Windows:** the app is not code-signed yet, so Windows may show “Windows protected your PC”. Click **More info**, then **Run anyway**.
 >
-> **macOS:** عند أول تشغيل انقر على التطبيق بزر الفأرة الأيمن واختر **Open**، أو نفّذ `xattr -cr /Applications/Marsam.app`.
+> **macOS:** on first launch, right-click the app and choose **Open**, or run `xattr -cr /Applications/Marsam.app`.
 
-## المزايا
+## Features
 
-- **يعمل دون إنترنت**: مكتبة Mermaid 12 والخطوط ومحرر الشيفرة كلها مضمَّنة في البرنامج.
-- **عربي وإنجليزي**: بدّل لغة الواجهة واتجاهها في أي وقت من زر اللغة أو من الإعدادات، مع قوالب ومقتطفات بكلتا اللغتين.
-- **ملفات حقيقية**: افتح ملفات `.mmd` واحفظ فيها مباشرة (<kbd>Ctrl</kbd>+<kbd>S</kbd>) أو «حفظ باسم»، مع تنبيه عند الإغلاق إن بقيت تعديلات غير محفوظة، وإعادة تحميل تلقائية إن تغيّر الملف من برنامج آخر.
-- **تحديثات تلقائية**: يُبلغك البرنامج المثبّت بالإصدار الجديد ويثبّته بنقرة.
-- **محرر شيفرة كامل**: تلوين لصياغة Mermaid، إكمال تلقائي، بحث واستبدال، تعليق الأسطر وتكرارها ونقلها، وسجل تراجع مستقل لكل مخطط.
-- **معاينة حيّة**: تحريك وتكبير بالفأرة أو باللمس، وملاءمة للشاشة، ووضع ملء الشاشة. انقر على أي عقدة لتنتقل إلى سطرها في الشيفرة.
-- **أخطاء واضحة**: رقم السطر الصحيح مع علامة في الهامش، ويبقى آخر رسم صالح ظاهرًا أثناء التصحيح.
-- **30 قالبًا** بأمثلة عربية، منها أنواع Mermaid 12 الجديدة: هيكل السمكة، فِن، شجرة الملفات، وردلي، حالات الاستخدام، كينيفين.
-- **مقتطفات** تتغيّر حسب نوع المخطط الذي تكتبه.
-- **تصدير** SVG وPNG (حتى 4×) وPDF بنص قابل للبحث وMarkdown و`.mmd`، ونسخ الصورة أو الشيفرة إلى الحافظة.
-- **كل السمات وأساليب الرسم**: Default وNeo وRedux وغيرها، الرسم باليد، تخطيط ELK أو Dagre، وألوان مخصّصة.
-- **حفظ تلقائي** لكل المخططات، مع نسخة احتياطية `.json` لنقلها بين الأجهزة.
+- **Works offline** — Mermaid 12, the fonts and the code editor are all bundled; nothing is loaded from the internet.
+- **English and Arabic** — switch the interface language and direction at any time from the language button or Settings. Templates and snippets come in both languages, and Arabic labels render correctly in diagrams.
+- **Real files** — open `.mmd` files and save straight back to them (<kbd>Ctrl</kbd>+<kbd>S</kbd>) or use Save As. You are asked before closing with unsaved changes, and files edited by other programs reload automatically.
+- **Automatic updates** — the installed app tells you when a new version is out and installs it in one click.
+- **A real code editor** — Mermaid syntax highlighting, autocomplete, find and replace, comment, duplicate and move lines, and separate undo history for each diagram.
+- **Live preview** — pan and zoom with mouse or touch, fit to screen, fullscreen. Click any node to jump to its line in the code.
+- **Clear errors** — the exact line is marked in the editor, and the last valid diagram stays visible while you fix it.
+- **30 templates**, including the new Mermaid 12 diagram types: fishbone, Venn, file tree, Wardley map, use case and Cynefin.
+- **Snippets** that follow the type of diagram you are writing.
+- **Export** to SVG, PNG (up to 4×), PDF with searchable text, Markdown and `.mmd`, or copy the image or code to the clipboard.
+- **Every theme and style** — Default, Neo, Redux and more, hand-drawn look, ELK or Dagre layout, and custom colors.
+- **Autosave** for every diagram, plus `.json` backups to move your work between devices.
 
-اضغط <kbd>?</kbd> داخل البرنامج لعرض كل اختصارات لوحة المفاتيح.
+Press <kbd>?</kbd> inside the app to see all keyboard shortcuts.
 
-## البناء من المصدر
+## Build from source
 
-يتطلب [Node.js](https://nodejs.org) 22 أو أحدث.
+Requires [Node.js](https://nodejs.org) 22 or newer.
 
 ```bash
-npm install        # يثبّت الاعتماديات ويجهّز مجلد app/vendor
-npm start          # يشغّل البرنامج
-npm test           # اختبار آلي: الرسم والخطوط والتصدير وكل القوالب
-npm run dist:win   # يبني المثبّت والنسخة المحمولة في مجلد dist
+npm install        # installs dependencies and prepares app/vendor
+npm start          # runs the app
+npm test           # automated check: rendering, fonts, export, files and every template
+npm run dist:win   # builds the installer and portable exe into dist/
 ```
 
-وللأنظمة الأخرى: `npm run dist:mac` (على macOS) و`npm run dist:linux`.
+For other platforms: `npm run dist:mac` (on macOS) and `npm run dist:linux`.
 
-## نشر إصدار جديد
+## Publishing a new version
 
-1. غيّر رقم `version` في `package.json`، مثلًا إلى `1.0.1`، ثم ابنِ البرنامج: `npm run dist:win`.
-2. في صفحة Releases اضغط **Draft a new release**، وأنشئ وسمًا بالرقم نفسه مسبوقًا بحرف v، مثل `v1.0.1`.
-3. أرفق هذه الملفات من مجلد `dist` كما هي دون تغيير أسمائها:
-   - `Marsam-Setup-<الإصدار>.exe` و`Marsam-Setup-<الإصدار>.exe.blockmap` و`latest.yml` (هذه الثلاثة يحتاجها التحديث التلقائي)
-   - `Marsam-<الإصدار>-portable.exe`
-4. انشر الإصدار كإصدار عادي، لا مسودة (Draft) ولا تجريبي (Pre-release).
-5. تكتشف النسخ المثبّتة الإصدار الجديد عند تشغيلها، ويثبّته مثبّت Windows بنقرة. أما النسخة المحمولة فتعرض رابط صفحة التنزيل.
+1. Change `version` in `package.json` (for example to `1.0.1`), then build: `npm run dist:win`.
+2. On the Releases page click **Draft a new release** and create a tag with the same number prefixed by `v`, such as `v1.0.1`.
+3. Attach these files from `dist/` without renaming them:
+   - `Marsam-Setup-<version>.exe`, `Marsam-Setup-<version>.exe.blockmap` and `latest.yml` — auto-update needs all three
+   - `Marsam-<version>-portable.exe`
+4. Publish it as a normal release — not a draft and not a pre-release.
+5. Installed copies find the new version on their next launch; the Windows installer updates in one click, and the portable exe shows a link to the download page.
 
-لبناء نسخ macOS وLinux: من تبويب **Actions** اختر **Build & Release** ثم **Run workflow**، وحمّل الملفات من أسفل صفحة التشغيل عند انتهائه، ثم أرفقها بالإصدار.
+To build macOS and Linux versions, open the **Actions** tab, choose **Build & Release**, click **Run workflow**, then download the files from the bottom of the run page and attach them to the release.
 
 > [!IMPORTANT]
-> التحديث التلقائي يقرأ صفحة Releases مباشرة، لذلك يجب أن يكون المستودع **عامًا** (Public).
+> Auto-update reads the Releases page directly, so the repository must be **public**.
 
-## بنية المشروع
+## Project structure
 
 ```
-app/index.html        بنية الواجهة
-app/styles.css        التنسيق (فاتح وداكن، يمين ويسار)
-app/i18n.js           كل نصوص الواجهة بالعربية والإنجليزية
-app/content.js        القوالب والمقتطفات وأنواع المخططات باللغتين
-app/app.js            منطق المحرر والمعاينة والتصدير
-app/vendor/           Mermaid وCodeMirror والخطوط؛ يُنشأ تلقائيًا بعد npm install
-electron/main.js      نافذة البرنامج، الملفات، PDF، التحديثات، وفتح ملفات .mmd
-electron/preload.js   الجسر الآمن بين الواجهة والنظام
-scripts/vendor.mjs    ينسخ الاعتماديات من node_modules إلى app/vendor
-build/                أيقونة البرنامج
+app/index.html        interface markup
+app/styles.css        styles (light and dark, left-to-right and right-to-left)
+app/i18n.js           every interface string, in English and Arabic
+app/content.js        templates, snippets and diagram types in both languages
+app/app.js            editor, preview and export logic
+app/vendor/           Mermaid, CodeMirror and fonts — generated by npm install
+electron/main.js      app window, files, PDF, updates and opening .mmd files
+electron/preload.js   the secure bridge between the interface and the system
+scripts/vendor.mjs    copies dependencies from node_modules into app/vendor
+build/                app icon
 ```
 
-## الترخيص
+## License
 
-© 2026 [Obsidian-Strike](https://github.com/Obsidian-Strike) — Ahmad Al-Ahmad. منشور بترخيص [MIT](LICENSE).
+© 2026 [Obsidian-Strike](https://github.com/Obsidian-Strike) — Ahmad Al-Ahmad. Released under the [MIT License](LICENSE).
 
-يضم البرنامج [Mermaid](https://github.com/mermaid-js/mermaid) و[CodeMirror 5](https://codemirror.net/5/) (MIT)، وخطوط IBM Plex Sans Arabic وNoto Kufi Arabic وJetBrains Mono (SIL OFL 1.1).
+Marsam bundles [Mermaid](https://github.com/mermaid-js/mermaid) and [CodeMirror 5](https://codemirror.net/5/) (MIT), and the IBM Plex Sans Arabic, Noto Kufi Arabic and JetBrains Mono fonts (SIL OFL 1.1).
 
 ---
-
-<details>
-<summary><b>English</b></summary>
-
-**Marsam** is an offline Mermaid diagram editor with an Arabic and English interface (switchable at any time), built on Mermaid 12 and CodeMirror 5 and packaged with Electron. It opens and saves `.mmd` files directly, exports SVG/PNG/PDF, and updates itself from GitHub Releases.
-
-- Download installers from [Releases](../../releases/latest): Windows (installer or portable exe), macOS (dmg), Linux (AppImage/deb), or a zip that runs in any browser.
-- Live preview with pan/zoom and click-to-source, syntax highlighting and autocomplete, precise error lines, 30 templates, context-aware snippets, SVG/PNG/Markdown export, and autosave with JSON backups.
-- Build: `npm install`, `npm start`, `npm test`, `npm run dist:win`. Pushing a `v*` tag builds and publishes all platforms through GitHub Actions.
-- © 2026 Obsidian-Strike (Ahmad Al-Ahmad). Released under the MIT License.
-
-</details>
