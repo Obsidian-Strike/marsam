@@ -49,6 +49,15 @@ Get the latest version from the [**Releases**](../../releases/latest) page:
 
 Press <kbd>?</kbd> inside the app to see all keyboard shortcuts.
 
+### Full Arabic and right-to-left support
+
+One click switches the whole interface to Arabic, mirrored right-to-left, with Arabic templates, snippets and fonts that render Arabic labels correctly in diagrams and exports.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/screenshot-ar-dark.png">
+  <img src="docs/screenshot-ar-light.png" alt="Marsam in Arabic: the same editor mirrored right-to-left with an Arabic flowchart">
+</picture>
+
 ## Build from source
 
 Requires [Node.js](https://nodejs.org) 22 or newer.
@@ -99,3 +108,4 @@ build/                app icon
 Marsam bundles [Mermaid](https://github.com/mermaid-js/mermaid) and [CodeMirror 5](https://codemirror.net/5/) (MIT), and the IBM Plex Sans Arabic, Noto Kufi Arabic and JetBrains Mono fonts (SIL OFL 1.1).
 
 ---
+
