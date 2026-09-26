@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مرسم</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' file: 'unsafe-inline'; style-src 'self' file: 'unsafe-inline'; img-src 'self' file: data: blob:; font-src data:; connect-src data: blob:; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="color-scheme" content="light dark">
+<script src="vendor/fonts.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-files" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-save" viewBox="0 0 24 24"><path d="M5 3h11l3 3v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M7 3v5h8M7 21v-7h10v7"/></symbol>
+    <symbol id="i-pdf" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M8 12h8M8 15.5h8M8 19h5"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-braces" viewBox="0 0 24 24"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1M16 21h1a2 2 0 0 0 2-2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4h8v2M6 6l1 14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1l1-14M10 11v6M14 11v6"/></symbol>
+    <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V5M7 10l5-5 5 5M5 20h14"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
+    <symbol id="i-zoom-in" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4M11 8v6M8 11h6"/></symbol>
+    <symbol id="i-zoom-out" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4M8 11h6"/></symbol>
+    <symbol id="i-fit" viewBox="0 0 24 24"><path d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/><rect x="8.5" y="8.5" width="7" height="7" rx="1"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
+    <symbol id="i-columns" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4v16"/></symbol>
+    <symbol id="i-rows" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 12h18"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17h.01"/></symbol>
+    <symbol id="i-keyboard" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5l9.5 17h-19z"/><path d="M12 10v4.5M12 17.5h.01"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></symbol>
+    <symbol id="i-md" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M6 15V9l3 3 3-3v6M17 9v6M15 13l2 2 2-2"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></symbol>
+    <symbol id="i-file-code" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M10 12l-2 2 2 2M14 12l2 2-2 2"/></symbol>
+  </defs>
+</svg>
+
+<div class="app" id="app" dir="rtl" lang="ar" data-side="open">
+  <header class="topbar">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true">
+        <rect x="1" y="1" width="28" height="28" rx="8" fill="var(--accent)"/>
+        <rect x="7" y="7" width="7.5" height="6" rx="1.6" fill="var(--accent-ink)"/>
+        <path d="M10.75 13v7.25h5.5" fill="none" stroke="var(--accent-ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="20" cy="20.25" r="3.4" fill="none" stroke="var(--accent-ink)" stroke-width="2"/>
+      </svg>
+      <span class="brand-name" data-i18n="appName">مرسم</span>
+    </div>
+    <span class="divider-v"></span>
+    <div class="doc-title">
+      <input id="docName" class="doc-name" dir="auto" spellcheck="false" autocomplete="off" data-i18n-aria="docNameAria">
+      <button class="file-chip" id="fileChip" hidden><svg class="ico sm"><use href="#i-file"/></svg><span id="fileChipName"></span><i class="dirty" id="fileChipDirty" hidden></i></button>
+      <span class="save-state" id="saveState" data-state="saved"><span class="dot"></span><span class="txt"></span></span>
+    </div>
+    <div class="top-actions">
+      <div class="seg seg-layout" role="group" data-i18n-aria="layoutGroup">
+        <button class="icon-btn" data-layout="split-h" data-i18n-title="layoutSplitH"><svg class="ico sm"><use href="#i-columns"/></svg></button>
+        <button class="icon-btn" data-layout="split-v" data-i18n-title="layoutSplitV"><svg class="ico sm"><use href="#i-rows"/></svg></button>
+        <button class="icon-btn" data-layout="preview" data-i18n-title="layoutPreview"><svg class="ico sm"><use href="#i-eye"/></svg></button>
+      </div>
+      <button class="icon-btn lang-btn" id="btnLang" data-i18n="langBtn" data-i18n-title="langBtnTitle">EN</button>
+      <button class="icon-btn" id="btnUiTheme"><svg class="ico"><use href="#i-monitor"/></svg></button>
+      <button class="icon-btn hide-sm" id="btnHelp" data-i18n-title="shortcutsTitle"><svg class="ico"><use href="#i-keyboard"/></svg></button>
+      <div class="menu-wrap">
+        <button class="btn" id="btnFile" aria-haspopup="menu" aria-expanded="false"><svg class="ico sm"><use href="#i-folder"/></svg><span class="lbl" data-i18n="fileMenu">ملف</span></button>
+        <div class="menu" id="menuFile" role="menu" hidden>
+          <button class="menu-item" data-file="new" role="menuitem"><svg class="ico sm"><use href="#i-plus"/></svg><span data-i18n="fileNew"></span><span class="hint native-only">Ctrl+N</span></button>
+          <button class="menu-item" data-file="open" role="menuitem"><svg class="ico sm"><use href="#i-upload"/></svg><span data-i18n="fileOpen"></span><span class="hint">Ctrl+O</span></button>
+          <div class="menu-sep"></div>
+          <button class="menu-item" data-file="save" role="menuitem"><svg class="ico sm"><use href="#i-save"/></svg><span id="fileSaveLabel" data-i18n="fileSave"></span><span class="hint native-only">Ctrl+S</span></button>
+          <button class="menu-item native-only" data-file="saveAs" role="menuitem"><svg class="ico sm"><use href="#i-file"/></svg><span data-i18n="fileSaveAs"></span><span class="hint">Ctrl+Shift+S</span></button>
+          <button class="menu-item native-only" data-file="reveal" id="fileRevealItem" role="menuitem"><svg class="ico sm"><use href="#i-folder"/></svg><span data-i18n="fileReveal"></span></button>
+          <div class="menu-sep"></div>
+          <button class="menu-item" data-file="backup" role="menuitem"><svg class="ico sm"><use href="#i-download"/></svg><span data-i18n="fileBackup"></span><span class="hint">.json</span></button>
+        </div>
+      </div>
+      <div class="menu-wrap">
+        <button class="btn" id="btnShare" aria-haspopup="menu" aria-expanded="false"><svg class="ico sm"><use href="#i-share"/></svg><span class="lbl" data-i18n="share">مشاركة</span></button>
+        <div class="menu" id="menuShare" role="menu" hidden>
+          <a class="menu-item" id="shareOpenLive" role="menuitem" href="https://mermaid.live/edit" target="_blank" rel="noopener"><svg class="ico sm"><use href="#i-external"/></svg><span data-i18n="shareOpenLive"></span></a>
+          <button class="menu-item" id="shareCopyLive" role="menuitem"><svg class="ico sm"><use href="#i-link"/></svg><span data-i18n="shareCopyLive"></span></button>
+          <button class="menu-item" id="shareCopyInk" role="menuitem"><svg class="ico sm"><use href="#i-image"/></svg><span data-i18n="shareCopyInk"></span></button>
+          <div class="menu-sep"></div>
+          <p class="menu-note" data-i18n="shareNote"></p>
+        </div>
+      </div>
+      <div class="menu-wrap">
+        <button class="btn primary" id="btnExport" aria-haspopup="menu" aria-expanded="false"><svg class="ico sm"><use href="#i-download"/></svg><span class="lbl" data-i18n="export">تصدير</span><svg class="ico sm hide-sm"><use href="#i-chevron"/></svg></button>
+        <div class="menu" id="menuExport" role="menu" hidden>
+          <div class="menu-label" id="exportDlLabel" data-i18n="exportDownload"></div>
+          <button class="menu-item" data-export="svg" role="menuitem"><svg class="ico sm"><use href="#i-code"/></svg><span data-i18n="exportSvg"></span><span class="hint">.svg</span></button>
+          <button class="menu-item" data-export="png" role="menuitem"><svg class="ico sm"><use href="#i-image"/></svg><span data-i18n="exportPng"></span><span class="hint" id="pngHint">2×</span></button>
+          <button class="menu-item native-only" data-export="pdf" role="menuitem"><svg class="ico sm"><use href="#i-pdf"/></svg><span data-i18n="exportPdf"></span><span class="hint">.pdf</span></button>
+          <button class="menu-item" data-export="md" role="menuitem"><svg class="ico sm"><use href="#i-md"/></svg><span data-i18n="exportMd"></span><span class="hint">.md</span></button>
+          <button class="menu-item local-only" data-export="mmd" role="menuitem"><svg class="ico sm"><use href="#i-file-code"/></svg><span data-i18n="exportMmd"></span><span class="hint">.mmd</span></button>
+          <div class="menu-sep"></div>
+          <div class="menu-label" data-i18n="exportCopy"></div>
+          <button class="menu-item" data-export="copy-png" role="menuitem"><svg class="ico sm"><use href="#i-image"/></svg><span data-i18n="copyPng"></span></button>
+          <button class="menu-item" data-export="copy-svg" role="menuitem"><svg class="ico sm"><use href="#i-code"/></svg><span data-i18n="copySvg"></span></button>
+          <button class="menu-item" data-export="copy-md" role="menuitem"><svg class="ico sm"><use href="#i-md"/></svg><span data-i18n="copyMd"></span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="body">
+    <nav class="rail" data-i18n-aria="railAria">
+      <button class="rail-btn" data-panel="docs" data-i18n-title="navDocs"><span class="pill"><svg class="ico"><use href="#i-files"/></svg></span><span data-i18n="navDocs">مخططاتي</span></button>
+      <button class="rail-btn" data-panel="templates" data-i18n-title="navTemplates"><span class="pill"><svg class="ico"><use href="#i-grid"/></svg></span><span data-i18n="navTemplates">القوالب</span></button>
+      <button class="rail-btn" data-panel="snippets" data-i18n-title="navSnippets"><span class="pill"><svg class="ico"><use href="#i-braces"/></svg></span><span data-i18n="navSnippets">مقتطفات</span></button>
+      <button class="rail-btn" data-panel="settings" data-i18n-title="navSettings"><span class="pill"><svg class="ico"><use href="#i-sliders"/></svg></span><span data-i18n="navSettings">الإعدادات</span></button>
+    </nav>
+
+    <aside class="side" id="side">
+      <section class="panel" data-panel="docs">
+        <div class="panel-head">
+          <h2 data-i18n="docsTitle">مخططاتي</h2>
+          <button class="icon-btn sm" id="btnOpenFile" data-i18n-title="openFileTitle"><svg class="ico sm"><use href="#i-upload"/></svg></button>
+          <button class="icon-btn sm" id="btnBackup" data-i18n-title="backupTitle"><svg class="ico sm"><use href="#i-download"/></svg></button>
+          <button class="icon-btn sm" id="btnNewDoc" data-i18n-title="newDocTitle"><svg class="ico sm"><use href="#i-plus"/></svg></button>
+        </div>
+        <label class="search"><svg class="ico sm"><use href="#i-search"/></svg><input id="docSearch" type="search" data-i18n-ph="docSearch" autocomplete="off"></label>
+        <div class="panel-scroll"><ul class="doc-list" id="docList"></ul></div>
+        <p class="panel-foot" data-i18n-html="docsFoot"></p>
+      </section>
+
+      <section class="panel" data-panel="templates" hidden>
+        <div class="panel-head"><h2 data-i18n="tplTitle">القوالب</h2></div>
+        <p class="panel-sub" data-i18n="tplSub"></p>
+        <label class="search"><svg class="ico sm"><use href="#i-search"/></svg><input id="tplSearch" type="search" data-i18n-ph="tplSearch" autocomplete="off"></label>
+        <div class="panel-scroll" id="tplList"></div>
+      </section>
+
+      <section class="panel" data-panel="snippets" hidden>
+        <div class="panel-head"><h2 data-i18n="snipTitle">المقتطفات</h2></div>
+        <div class="type-banner" id="snipBanner"></div>
+        <div class="panel-scroll" id="snipList"></div>
+      </section>
+
+      <section class="panel" data-panel="settings" hidden>
+        <div class="panel-head"><h2 data-i18n="setTitle">الإعدادات</h2></div>
+        <div class="panel-scroll">
+          <div class="set-group">
+            <h3 data-i18n="grpInterface"></h3>
+            <div class="field"><span data-i18n="setLang"></span>
+              <div class="seg-ctl" data-seg="lang"><button data-value="ar" lang="ar">العربية</button><button data-value="en" lang="en">English</button></div>
+            </div>
+            <div class="field"><span data-i18n="setUiTheme"></span>
+              <div class="seg-ctl" data-seg="uiTheme"><button data-value="system" data-i18n="uiSystem"></button><button data-value="light" data-i18n="uiLight"></button><button data-value="dark" data-i18n="uiDark"></button></div>
+            </div>
+          </div>
+          <div class="set-group">
+            <h3 data-i18n="grpDiagram"></h3>
+            <label class="field"><span data-i18n="setTheme"></span>
+              <select id="setTheme" data-setting="theme">
+                <option value="auto" data-i18n="themeAuto"></option>
+                <option value="default" data-i18n="themeDefault"></option>
+                <option value="neutral" data-i18n="themeNeutral"></option>
+                <option value="forest" data-i18n="themeForest"></option>
+                <option value="dark" data-i18n="themeDark"></option>
+                <option value="neo">Neo</option>
+                <option value="neo-dark">Neo Dark</option>
+                <option value="redux">Redux</option>
+                <option value="redux-dark">Redux Dark</option>
+                <option value="redux-color">Redux Color</option>
+                <option value="redux-dark-color">Redux Dark Color</option>
+                <option value="base" data-i18n="themeBase"></option>
+              </select>
+            </label>
+            <div class="field"><span data-i18n="setLook"></span>
+              <div class="seg-ctl" data-seg="look"><button data-value="classic" data-i18n="lookClassic"></button><button data-value="handDrawn" data-i18n="lookHand"></button><button data-value="neo">Neo</button></div>
+            </div>
+            <label class="field"><span data-i18n="setLayout"></span>
+              <select id="setLayout" data-setting="layout">
+                <option value="auto" data-i18n="layoutAuto"></option>
+                <option value="elk" data-i18n="layoutElk"></option>
+                <option value="dagre" data-i18n="layoutDagre"></option>
+              </select>
+            </label>
+            <label class="field"><span data-i18n="setCurve"></span>
+              <select id="setCurve" data-setting="curve">
+                <option value="basis" data-i18n="curveBasis"></option>
+                <option value="linear" data-i18n="curveLinear"></option>
+                <option value="step" data-i18n="curveStep"></option>
+                <option value="stepAfter">stepAfter</option>
+                <option value="stepBefore">stepBefore</option>
+                <option value="monotoneX">monotoneX</option>
+                <option value="monotoneY">monotoneY</option>
+                <option value="natural">natural</option>
+                <option value="cardinal">cardinal</option>
+                <option value="catmullRom">catmullRom</option>
+                <option value="bumpX">bumpX</option>
+                <option value="bumpY">bumpY</option>
+              </select>
+            </label>
+            <label class="field"><span data-i18n="setFont"></span>
+              <select id="setFont" data-setting="font">
+                <option value="ibm">IBM Plex Sans Arabic</option>
+                <option value="kufi">Noto Kufi Arabic</option>
+                <option value="mono">JetBrains Mono</option>
+                <option value="classic" data-i18n="fontClassic"></option>
+                <option value="system" data-i18n="fontSystem"></option>
+              </select>
+            </label>
+            <label class="switch-row"><span><span data-i18n="setHtmlLabels"></span><small data-i18n="setHtmlLabelsHint"></small></span><input type="checkbox" class="switch" id="setHtmlLabels" data-setting="htmlLabels"></label>
+          </div>
+          <div class="set-group" id="baseColors" hidden>
+            <h3 data-i18n="grpBase"></h3>
+            <div class="color-grid" id="colorGrid"></div>
+            <button class="btn sm" id="resetColors" data-i18n="resetColors"></button>
+          </div>
+          <div class="set-group">
+            <h3 data-i18n="grpPreview"></h3>
+            <div class="field"><span data-i18n="setPaper"></span>
+              <div class="seg-ctl" data-seg="bg"><button data-value="dots" data-i18n="bgDots"></button><button data-value="grid" data-i18n="bgGrid"></button><button data-value="plain" data-i18n="bgPlain"></button></div>
+            </div>
+          </div>
+          <div class="set-group">
+            <h3 data-i18n="grpEditor"></h3>
+            <label class="field"><span><span data-i18n="setFontSize"></span> <output id="outFontSize"></output></span><input type="range" id="setFontSize" min="11" max="22" step="1" data-setting="fontSize"></label>
+            <label class="switch-row"><span data-i18n="setWrap"></span><input type="checkbox" class="switch" id="setWrap" data-setting="wrap"></label>
+            <label class="field"><span><span data-i18n="setDelay"></span> <output id="outDelay"></output></span><input type="range" id="setDelay" min="100" max="1500" step="50" data-setting="delay"></label>
+          </div>
+          <div class="set-group">
+            <h3 data-i18n="grpExport"></h3>
+            <div class="field"><span data-i18n="setPngScale"></span>
+              <div class="seg-ctl" data-seg="pngScale"><button data-value="1">1×</button><button data-value="2">2×</button><button data-value="3">3×</button><button data-value="4">4×</button></div>
+            </div>
+            <div class="field"><span data-i18n="setExportBg"></span>
+              <div class="seg-ctl" data-seg="pngBg"><button data-value="transparent" data-i18n="bgTransparent"></button><button data-value="white" data-i18n="bgWhite"></button><button data-value="theme" data-i18n="bgPreview"></button></div>
+            </div>
+          </div>
+          <div class="set-group native-only" id="updatesGroup">
+            <h3 data-i18n="grpUpdates"></h3>
+            <div class="about-line"><span data-i18n="currentVersion"></span><code id="appVersion"></code></div>
+            <label class="switch-row"><span><span data-i18n="setAutoUpdate"></span><small data-i18n="setAutoUpdateHint"></small></span><input type="checkbox" class="switch" id="setAutoUpdate" data-setting="autoUpdate"></label>
+            <button class="btn sm" id="btnCheckUpdate"><svg class="ico sm"><use href="#i-arrow-up"/></svg><span data-i18n="checkNow"></span></button>
+          </div>
+          <button class="btn ghost danger sm" id="resetSettings" data-i18n="resetSettings"></button>
+        </div>
+      </section>
+    </aside>
+
+    <main class="work" id="work" data-layout="split-h">
+      <section class="pane pane-editor" data-i18n-aria="editorAria">
+        <div class="pane-head">
+          <span class="pane-title" data-i18n="paneCode">الشيفرة</span>
+          <span class="type-chip" id="typeChip"></span>
+          <span class="spacer"></span>
+          <label class="mini-toggle" data-i18n-title="autoRenderTitle"><input type="checkbox" class="switch" id="autoRender"><span class="hide-sm" data-i18n="autoRender"></span></label>
+          <button class="icon-btn sm" id="btnRender" data-i18n-title="renderNow"><svg class="ico sm"><use href="#i-play"/></svg></button>
+        </div>
+        <div class="editor-host" id="editorHost"></div>
+      </section>
+      <div class="splitter" id="splitter" role="separator" tabindex="0" data-i18n-aria="splitterAria"></div>
+      <section class="pane pane-preview" id="panePreview" data-i18n-aria="previewAria">
+        <div class="pane-head">
+          <span class="pane-title" data-i18n="panePreview">المعاينة</span>
+          <span class="meta" id="diagMeta"></span>
+          <span class="spacer"></span>
+          <div class="zoom">
+            <button class="icon-btn sm" id="zoomOut" data-i18n-title="zoomOut"><svg class="ico sm"><use href="#i-zoom-out"/></svg></button>
+            <button class="zoom-val" id="zoomVal" data-i18n-title="zoomReset">100%</button>
+            <button class="icon-btn sm" id="zoomIn" data-i18n-title="zoomIn"><svg class="ico sm"><use href="#i-zoom-in"/></svg></button>
+            <button class="icon-btn sm" id="zoomFit" data-i18n-title="zoomFit"><svg class="ico sm"><use href="#i-fit"/></svg></button>
+            <button class="icon-btn sm hide-xs" id="btnFull" data-i18n-title="fullscreen"><svg class="ico sm"><use href="#i-expand"/></svg></button>
+          </div>
+        </div>
+        <div class="canvas" id="canvas" tabindex="0" data-bg="dots" data-tone="light" data-i18n-aria="canvasAria">
+          <div class="stage" id="stage"></div>
+          <div class="canvas-msg" id="canvasMsg"><div class="spinner"></div><span data-i18n="loadingMermaid">جارٍ تحميل Mermaid…</span></div>
+          <div class="stale-badge" id="staleBadge" data-i18n="staleBadge" hidden></div>
+        </div>
+        <div class="error-bar" id="errorBar" role="alert" hidden>
+          <div class="error-head">
+            <svg class="ico sm"><use href="#i-alert"/></svg>
+            <strong id="errorTitle"></strong>
+            <button class="link-btn" id="errorGoto" hidden></button>
+            <span class="spacer"></span>
+            <button class="icon-btn sm" id="errorClose" data-i18n-title="hide"><svg class="ico sm"><use href="#i-x"/></svg></button>
+          </div>
+          <pre class="error-msg" id="errorMsg"></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="status">
+    <span id="stRender"></span>
+    <span id="stCursor"></span>
+    <span class="hide-sm" id="stSize"></span>
+    <span class="spacer"></span>
+    <button class="update-pill" id="updatePill" hidden></button>
+    <a class="status-link hide-sm" href="https://github.com/Obsidian-Strike/marsam" target="_blank" rel="noopener" data-i18n-title="helpLinkTitle"><svg class="ico sm"><use href="#i-help"/></svg><span data-i18n="help">مساعدة</span></a>
+    <span class="ver-badge" id="stVersion">Mermaid 12.0.0</span>
+  </footer>
+
+  <div class="toast-host" id="toasts" role="status" aria-live="polite"></div>
+  <div class="scrim" id="scrim" hidden></div>
+
+  <div class="modal" id="helpModal" role="dialog" aria-modal="true" aria-labelledby="helpTitle" hidden>
+    <div class="modal-head">
+      <h2 id="helpTitle" data-i18n="helpTitle"></h2>
+      <button class="icon-btn sm" id="helpClose" data-i18n-title="closeEsc"><svg class="ico sm"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <div class="keys" id="keysList"></div>
+      <p class="tip" data-i18n-html="helpTip"></p>
+      <p class="modal-foot"><a href="https://github.com/Obsidian-Strike/marsam" target="_blank" rel="noopener" data-i18n="helpGuide"></a></p>
+      <p class="modal-credit" data-i18n-html="credit"></p>
+    </div>
+  </div>
+
+  <div class="drop-overlay" id="dropOverlay" hidden><span data-i18n="dropTitle"></span><small data-i18n="dropHint"></small></div>
+  <input type="file" id="fileInput" accept=".mmd,.mermaid,.md,.markdown,.txt,.json" multiple hidden>
+</div>
+
+<script src="vendor/codemirror.bundle.js"></script>
+<script src="i18n.js"></script>
+<script src="content.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

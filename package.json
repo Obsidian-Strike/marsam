@@ -1,0 +1,118 @@
+{
+  "name": "marsam",
+  "productName": "Marsam",
+  "version": "1.0.0",
+  "description": "مرسم — محرر Mermaid احترافي بواجهة عربية يعمل دون اتصال بالإنترنت",
+  "main": "electron/main.js",
+  "license": "MIT",
+  "author": {
+    "name": "Obsidian-Strike (Ahmad Al-Ahmad)",
+    "url": "https://github.com/Obsidian-Strike"
+  },
+  "homepage": "https://github.com/Obsidian-Strike/marsam",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Obsidian-Strike/marsam.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Obsidian-Strike/marsam/issues"
+  },
+  "private": true,
+  "scripts": {
+    "postinstall": "node scripts/vendor.mjs",
+    "vendor": "node scripts/vendor.mjs",
+    "start": "electron .",
+    "test": "electron . --smoke",
+    "dist": "electron-builder --publish never",
+    "dist:win": "electron-builder --win nsis portable --x64 --publish never",
+    "dist:mac": "electron-builder --mac dmg zip --publish never",
+    "dist:linux": "electron-builder --linux AppImage deb --x64 --publish never"
+  },
+  "devDependencies": {
+    "@fontsource/ibm-plex-sans-arabic": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "@fontsource/noto-kufi-arabic": "5.3.0",
+    "codemirror": "5.65.18",
+    "electron": "44.4.5",
+    "electron-builder": "26.15.3",
+    "mermaid": "12.0.0"
+  },
+  "build": {
+    "appId": "io.github.marsam.editor",
+    "productName": "Marsam",
+    "copyright": "Copyright © 2026 Obsidian-Strike (Ahmad Al-Ahmad)",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "electron/**",
+      "app/**",
+      "build/icon.png",
+      "package.json"
+    ],
+    "npmRebuild": false,
+    "fileAssociations": [
+      {
+        "ext": [
+          "mmd",
+          "mermaid"
+        ],
+        "name": "Mermaid Diagram",
+        "description": "Mermaid diagram source",
+        "role": "Editor"
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Marsam",
+      "artifactName": "Marsam-Setup-${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "Marsam-${version}-portable.${ext}"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.developer-tools",
+      "icon": "build/icon.png"
+    },
+    "dmg": {
+      "artifactName": "Marsam-${version}-${arch}.${ext}"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Development",
+      "icon": "build/icon.png",
+      "maintainer": "Obsidian-Strike (Ahmad Al-Ahmad)",
+      "artifactName": "Marsam-${version}-${arch}.${ext}"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "Obsidian-Strike",
+        "repo": "marsam",
+        "releaseType": "release"
+      }
+    ]
+  },
+  "dependencies": {
+    "electron-updater": "6.8.9"
+  }
+}
